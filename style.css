@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+html , body, .wrapper{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    place-items: center; 
+    margin: 0;
+    padding: 0 24px;
+    background-image: url(layered-waves-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    animation: rotate 6s infinite alternate linear; 
+}
+
+.login-card {
+    background-color: aliceblue;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 30px 30px 44px;
+    border-radius: 1.25rem;
+    text-align: center;
+}
+
+.login-card > h2{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 12px;
+}
+
+.login-card > h3{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.39);
+    margin: 0 0 30px;
+    font-weight: 500;
+
+}
+
+.login-card > img{
+    transition: all 0.4s;
+    width: 40%;
+    margin-top: 0;
+}
+
+.login-form{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.login-form > input , .login-form > button {
+    width: 100%;
+    height: 50px;
+}
+
+.login-form > input{
+    border: 2px solid #ebebeb;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    transition: all 0.4s;
+}
+
+.login-form > input:hover {
+    border: 2px solid;   
+}
+
+.login-form > button{
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 1.25rem;
+    background-color: rgb(56, 125, 228);
+    color: #ebebeb;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.4s;
+}
+
+.login-form > button:hover{
+    background: #10449a ;
+}
+
+.login-form > a{
+    color: #216ce7;
+    font-size: 0.9rem;
+    text-align: left;
+    text-decoration: none;
+    margin-bottom: 6px;
+    transition: all 0.4s;
+}
+
+.login-form > a:hover{
+    color: #10449a;
+}
+
+.login-form > a.link-hacker{
+    color: yellowgreen;
+    text-align: center;
+    background-color: #1e232b;
+    border-radius: 1.25rem;
+    width: 100%;
+    padding: 16px;
+}
+
+.login-form > a.link-hacker:hover{
+    color: #216ce7;
+}
+
+@keyframes rotate{
+    100%{
+        background-position: 15% 50%;
+    }
+}
+
+@media(width>=500px ) {
+    body{
+        padding: 0;
+    }
+    .login-card{
+        margin:0;
+        width: 400px;
+    }
+}
+
+
+#btn-mas{
+    display: none;
+}
+
+.burbuja{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+}
+
+.redes a, .icon-plus{
+    display: block;
+    text-decoration: none;
+    background: #726a6a;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.404);
+    transition: all 500ms ease;
+}
+
+.redes a:hover{
+    background: #4c4b50;
+    color: #10449a;
+}
+
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.icon-plus{
+    cursor: pointer;
+    background: #10449a;
+}
+
+
+
+
+
+h4{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+}
+
+h4::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.788);
+    top: 50%;
+    z-index: -1;
+}
+
+h4 span{
+    background-color:  aliceblue;
+    padding: 0 15px;
+}
